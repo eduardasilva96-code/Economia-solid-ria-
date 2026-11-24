@@ -22,6 +22,14 @@ dash.draw('f_terr', (sel) => {
   sel.onchange = () => dash.setParams({ territorio: sel.value });
 });
 
+dash.draw('f_ciclo', (sel) => {
+  const d = dash.data('acoes');
+  const cs = d.status === 'ok' ? [...new Set(d.data.filter((r) => r.status === 'Válido' && r.ciclo).map((r) => r.ciclo))].sort() : [];
+  sel.replaceChildren(new Option('Todos', ''), ...cs.map((c) => new Option(c, c)));
+  sel.value = dash.params().ciclo || '';
+  sel.onchange = () => dash.setParams({ ciclo: sel.value });
+});
+
 dash.draw('f_agente', (sel) => {
   const d = dash.data('acoes');
   const ag = d.status === 'ok' ? [...new Set(d.data.filter((r) => r.status === 'Válido' && r.pesquisador).map((r) => r.pesquisador))].sort((a, b) => a.localeCompare(b, 'pt-BR')) : [];

@@ -8,7 +8,7 @@ registro,enviado_em,data_atividade,mes,ciclo,dia_semana,territorio_informado,ter
 8,2024-03-20,2024-03-29,2024-03,2024–25,Sex,Paranoá,Paranoá,Manhã,6.0,0.0,Campo não existia,,,Teste,Sim,9,,,,
 7,2024-03-21,2024-03-28,2024-03,2024–25,Qui,Paranoá,Paranoá,Manhã,9.0,2.0,Campo não existia,,,Teste,Não,7,,,,
 9,2024-03-25,2024-04-05,2024-04,2024–25,Sex,Paranoá,Paranoá,Manhã,10.15,1.85,Campo não existia,,Rita Martins,Válido,Não,11,,Casa da dona Ediva,Quadra 10 conjunto A casa 08,
-10,2024-03-25,2024-03-27,2024-03,2024–25,Qua,Paranoá,Paranoá,Manhã,8.0,2.0,Campo não existia,,Kátia Chagas Lucio - Teste,Válido,Não,2,,Casa do artesanato,"Qi 09, quadra 3, Cadsa 24, Centro - Paranoá, DF",
+10,2024-03-25,2024-03-27,2024-03,2024–25,Qua,Paranoá,Paranoá,Manhã,8.0,2.0,Campo não existia,,,Teste,Não,2,,,,
 11,2024-04-01,1981-12-07,1981-12,,Seg,Itapõa,Itapoã,Tarde,14.0,2.0,Campo não existia,,Samara dos Santos Silva,Data inválida,Não,-15456,,Centro de Convivência MEB Itapoã,Quadra 01 área especial Itapoã 1,
 12,2024-04-05,2024-04-13,2024-04,2024–25,Sáb,Paranoá,Paranoá,Noite,20.0,2.0,Campo não existia,,Zilma Cassemiro Gomes,Válido,Sim,8,,Na minha casa,Quadra 02 conjunto E casa 02 Paranoá,
 13,2024-04-09,2024-04-12,2024-04,2024–25,Sex,Paranoá,Paranoá,Tarde,14.0,2.5,Campo não existia,,Izabel Alexandre,Válido,Sim,3,,Cedep - Centro de Cultura e Desenvolvimento do Paranoá e Itapoã- DF,Qd 09 área especial Paranoá,
@@ -51,7 +51,7 @@ registro,enviado_em,data_atividade,mes,ciclo,dia_semana,territorio_informado,ter
 50,2024-09-03,2024-08-13,2024-08,2024–25,Ter,Santa Luzia - Estrutural,Estrutural,Noite,19.0,2.5,Campo não existia,,Vera Lucia Guedes,Válido,Sim,-21,,Casa da dona Vera,"Rua da paz, Quadra 23, Lote 27/28",
 51,2024-09-20,2024-09-21,2024-09,2024–25,Sáb,Estrutural,Estrutural,Tarde,14.0,3.0,Campo não existia,,Joelma Fernandes da Silva,Válido,Sim,1,,Casa da Marisa na antiga 12,Quadra 02 conjunto 05 casa 33 Setor Norte,
 52,2024-10-02,2024-10-15,2024-10,2024–25,Ter,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Noite,19.0,2.0,Campo não existia,,Layane Maria da Conceição,Válido,Não,13,,Residência de moradora (Marcyelle),SHSN chácara 58 Lote 07/ atrás da farmácia Gabriele,
-53,2024-10-02,2024-10-04,2024-10,2024–25,Sex,Estrutural,Estrutural,Manhã,9.0,2.0,Campo não existia,,Rita Teste,Válido,Não,2,,CREAS ESTRUTURA,AE ESPECIAL SEM NUMERO ESTRUTUAL,
+53,2024-10-02,2024-10-04,2024-10,2024–25,Sex,Estrutural,Estrutural,Manhã,9.0,2.0,Campo não existia,,,Teste,Não,2,,,,
 54,2024-10-03,2024-08-31,2024-08,2024–25,Sáb,Estrutural,Estrutural,Tarde,14.0,1.0,Campo não existia,,Joelma Fernandes da Silva,Válido,Não,-33,,Associação Ação Casinhas,Q8 Cj 1 Casa 4 - Setor Oeste,
 55,2024-10-03,2024-09-14,2024-09,2024–25,Sáb,Estrutural,Estrutural,Manhã,10.0,2.0,Campo não existia,,Djalma Silva do Nascimento,Válido,Não,-19,,Enfrente a Igreja Nossa Senhora do Encontro com Deus,Q 1 Cj 1 Casa 54 - Setor Oeste,
 58,2024-10-03,2024-09-14,2024-09,2024–25,Sáb,Estrutural,Estrutural,Noite,18.0,2.0,Campo não existia,,Wanely Silva Rezende,Válido,Não,-19,,MECE ( Enfrente a Igreja São José Operario),Q 1 Cj 1 Casa 54 - Setor Oeste,
@@ -74,31 +74,31 @@ registro,enviado_em,data_atividade,mes,ciclo,dia_semana,territorio_informado,ter
 73,2024-11-15,2024-11-21,2024-11,2024–25,Qui,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Noite,19.0,2.0,Campo não existia,,Ivone Santos da Silva,Válido,Não,6,,Escola Classe 66,"Área Especial 1, Córrego das Corujas",
 74,2024-11-17,2024-11-09,2024-11,2024–25,Sáb,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Tarde,15.0,2.08,Campo não existia,,Marcilio Sales Rodrigues,Válido,Sim,-8,,Economia Solidária do Sol Nascente,SHSN Ch 05 conjunto V lote 8D Condomínio Genesis,
 75,2024-11-27,2024-11-28,2024-11,2024–25,Qui,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Tarde,15.0,2.0,Campo não existia,,Jusianne Castilho,Válido,Sim,1,,Casa da natureza,Jusianne Pereira Castilho,
-76,2024-11-29,2024-11-30,2024-11,2024–25,Sáb,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Manhã,9.0,2.0,Campo não existia,,Márcio Oliveira Silva Santos,Válido,Sim,1,,Sede Associação Jardim das Oliveiras,SHSN Residencial das Acácias conjunto H lote 6 -Trecho 3,
+76,2024-11-29,2024-11-30,2024-11,2024–25,Sáb,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Manhã,9.0,2.0,Campo não existia,,Márcio Oliveira Silva Santos,Válido,Não,1,,Sede Associação Jardim das Oliveiras,SHSN Residencial das Acácias conjunto H lote 6 -Trecho 3,
 77,2024-11-29,2024-11-30,2024-11,2024–25,Sáb,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Manhã,9.0,2.0,Campo não existia,,Márcio Oliveira Silva Santos,Válido,Não,1,,Associação Jardim das Oliveiras,SHSN Residencial das Acácias Conjunto H lote 6,
 78,2024-11-29,2024-11-30,2024-11,2024–25,Sáb,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Manhã,9.0,2.0,Campo não existia,,Márcio Oliveira Silva Santos,Válido,Não,1,,Associação Jardim das Oliveiras,SHSN residencial das Acácias conjunto H lote 6,
 79,2024-12-11,2024-12-08,2024-12,2024–25,Dom,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Manhã,9.0,2.0,Campo não existia,,Márcio Oliveira Silva Santos,Válido,Não,-3,,Casa da Dione e Agropec,Residencial das Acácias conjunto C casas 03/ 35,
 80,2024-12-11,2024-12-08,2024-12,2024–25,Dom,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Manhã,9.0,2.0,Campo não existia,,Márcio Oliveira Silva Santos,Válido,Não,-3,,Casa da Dione/ Agropex,Acácias conjunto C,
 81,2025-01-10,2025-01-10,2025-01,2024–25,Sex,Sol Nascente/Pôr do Sol,Sol Nascente/Pôr do Sol,Tarde,16.0,3.0,Campo não existia,,Carlos Antônio,Válido,Sim,0,,Vila madureira,Chácara 36 conjunto 1 Lote 4,
-82,2026-04-22,2026-04-22,2026-04,2026,Qua,Samambaia,Samambaia,Manhã,9.0,2.0,Campo não existia,,Maria Eduarda Silva,Válido,Não,0,,Teste,Qd 08 lote -2,
-83,2026-04-22,2026-04-22,2026-04,2026,Qua,Ceilândia ,Ceilândia,Manhã,9.0,2.0,Campo não existia,,Maria Eduarda Silva,Válido,Não,0,,teste,teste,
-84,2026-04-22,2026-04-22,2026-04,2026,Qua,Planaltina,Planaltina,Manhã,9.0,2.0,Campo não existia,,Maria Eduarda,Válido,Não,0,,teste,teste,
+82,2026-04-22,2026-04-22,2026-04,2026,Qua,Samambaia,Samambaia,Manhã,9.0,2.0,Campo não existia,,,Teste,Não,0,,,,
+83,2026-04-22,2026-04-22,2026-04,2026,Qua,Ceilândia ,Ceilândia,Manhã,9.0,2.0,Campo não existia,,,Teste,Não,0,,,,
+84,2026-04-22,2026-04-22,2026-04,2026,Qua,Planaltina,Planaltina,Manhã,9.0,2.0,Campo não existia,,,Teste,Não,0,,,,
 85,2026-04-22,2026-04-22,2026-04,2026,Qua,Planaltina,Planaltina,Manhã,9.0,2.0,Campo não existia,,Maria Eduarda,Válido,Não,0,,Ubs,Quadra 21 lote 12,
 86,2026-04-23,2026-04-23,2026-04,2026,Qui,Planaltina,Planaltina,Manhã,9.0,8.0,Sim,Fiocruz,Maria Eduarda,Válido,Não,0,,UBS,Qd 02,
 87,2026-04-28,2026-04-29,2026-04,2026,Qua,Planaltina,Planaltina,Manhã,9.0,2.0,Sim,Casa Nordestina,Maria Eduarda,Válido,Não,1,(61) 99829-8476,UBS 01,Quadra 03 conjunto h lote 34,71571-407
 88,2026-04-28,2026-04-28,2026-04,2026,Ter,Samambaia,Samambaia,Manhã,9.0,2.0,Sim,Fiocruz,Maria,Válido,Não,0,(61) 98767-5432,Administração,Quadra 01 conjunto b lote 23,71571-407
 89,2026-04-28,2026-04-29,2026-04,2026,Qua,Planaltina,Planaltina,Manhã,9.0,2.0,Não,,Eduarda,Válido,Não,1,(61) 98367-8755,Hospital,Quadra 20 conjunto B lote 19,71571-407
 90,2026-04-28,2026-04-28,2026-04,2026,Ter,Samambaia,Samambaia,Manhã,9.0,3.0,Não,,Eduarda,Válido,Não,0,(61) 99838-4463,Hospital,Quadra 01 conjunto B lote 20,71571-407
-91,2026-04-28,2026-04-30,2026-04,2026,Qui,Planaltina,Planaltina,Manhã,9.0,2.0,Sim,Fiocruz,,Teste,Não,2,,,,
-92,2026-04-28,2026-04-30,2026-04,2026,Qui,Ceilândia ,Ceilândia,Manhã,9.0,2.0,Sim,Fiocruz/PICAPS,,Teste,Não,2,,,,
-93,2026-04-28,2026-04-28,2026-04,2026,Ter,Samambaia,Samambaia,Manhã,9.0,2.0,Não,,Teste L,Válido,Não,0,(61) 98678-4318,TESTE,"Quadra 02 Conjunto B lote 20, São Sebastião",72010-010
+91,2026-04-28,2026-04-30,2026-04,2026,Qui,Planaltina,Planaltina,Manhã,9.0,2.0,Sim,,,Teste,Não,2,,,,
+92,2026-04-28,2026-04-30,2026-04,2026,Qui,Ceilândia ,Ceilândia,Manhã,9.0,2.0,Sim,,,Teste,Não,2,,,,
+93,2026-04-28,2026-04-28,2026-04,2026,Ter,Samambaia,Samambaia,Manhã,9.0,2.0,Não,,,Teste,Não,0,,,,
 94,2026-04-28,2026-04-28,2026-04,2026,Ter,Samambaia,Samambaia,Manhã,9.0,2.0,Não,,,Teste,Sim,0,,,,
 95,2026-04-28,2026-04-28,2026-04,2026,Ter,Samambaia,Samambaia,Manhã,9.0,4.0,Não,,,Teste,Não,0,,,,
-96,2026-04-28,2026-04-29,2026-04,2026,Qua,Ceilândia ,Ceilândia,Manhã,9.0,2.0,Sim,klkwdh,,Teste,Não,1,,,,
-97,2026-05-05,2026-05-06,2026-05,2026,Qua,Planaltina,Planaltina,Manhã,9.0,2.0,Sim,jkhc,,Teste,Não,1,,,,
+96,2026-04-28,2026-04-29,2026-04,2026,Qua,Ceilândia ,Ceilândia,Manhã,9.0,2.0,Sim,,,Teste,Não,1,,,,
+97,2026-05-05,2026-05-06,2026-05,2026,Qua,Planaltina,Planaltina,Manhã,9.0,2.0,Sim,,,Teste,Não,1,,,,
 98,2026-06-10,2026-06-10,2026-06,2026,Qua,Samambaia,Samambaia,Manhã,8.5,2.0,Sim,Instituto Raiz Social,Iracema Rodrigues Silva,Válido,Não,0,(61) 98565-2526,Instituto Raiz Social,QR 523 Conjunto 08 Lote 06 Samambaia Sul-DF,72317-108
 99,2026-06-22,2026-06-25,2026-06,2026,Qui,Samambaia,Samambaia,Tarde,16.0,2.0,Não,,Clades Maria Lopes,Válido,Não,3,(64) 99233-2306,CED 619 SAMAMBAIA NORTE,Área Especial 01 Samambaia Norte,72333-100
-100,2026-06-25,2026-06-25,2026-06,2026,Qui,Samambaia,Samambaia,Tarde,16.0,2.0,Não,,Teste Teste,Válido,Não,0,(61) 99141-7483,Maria de Nazare,Qn 4040 área especial,72318-540
+100,2026-06-25,2026-06-25,2026-06,2026,Qui,Samambaia,Samambaia,Tarde,16.0,2.0,Não,,,Teste,Não,0,,,,
 101,2026-07-01,2026-07-14,2026-07,2026,Ter,Samambaia,Samambaia,Manhã,8.0,2.0,Sim,Associação Maria de Nazaré,Maria Eliete,Válido,Não,13,(61) 99672-1950,Associação Maria de Nazaré,QN 404 área Especial Maria de Nazaré,72318-540
 102,2026-07-07,2026-07-18,2026-07,2026,Sáb,Samambaia,Samambaia,Manhã,8.0,2.0,Sim,Instituto Coruja Branca,Jacira Ribeiro,Válido,Sim,11,(61) 99801-0107,Recanto Ecológico Saburo,QR 612 chácara 31,72322-845
 103,2026-07-07,2026-07-26,2026-07,2026,Dom,Samambaia,Samambaia,Manhã,8.0,2.0,Sim,Instituto Coruja Branca,Jacira Ribeiro,Válido,Sim,19,(61) 99801-0107,Recanto Ecológico Saburo,QR 612 chácara 31 Núcleo Rural Taguatinga,72322-845
@@ -111,6 +111,6 @@ registro,enviado_em,data_atividade,mes,ciclo,dia_semana,territorio_informado,ter
 110,2026-07-27,2026-08-01,2026-08,2026,Sáb,Samambaia,Samambaia,Tarde,15.0,2.0,Não,,Clades Maria Lopes,Válido,Não,5,(64) 99233-2306,CED619 Samambaia,"QS619, Área Especial 01, Samambaia Norte",72333-519
 111,2026-08-06,2026-07-21,2026-07,2026,Ter,Samambaia,Samambaia,Noite,18.0,3.0,Não,,Adelice Rodrigues de Sousa,Válido,Não,-16,(61) 99100-5164,RESIDÊNCIA DA PESQUISADORA - QR 502 CONJUNTO 16 CASA 05 - SAMAMBAIA SUL-DF,QR 502 CONJUNTO 16 CASA 05 - SAMAMBAIA SUL-DF,72310-416
 112,2026-08-12,1980-09-04,1980-09,,Qui,Samambaia,Samambaia,Manhã,9.0,2.0,Sim,CTCAN e Horta sementes em ação,Jeane Soares Souza,Data inválida,Não,-16778,(61) 99166-6663,CTCAN,Qr401conj10casa19,72319-010
-113,2026-09-21,2026-09-12,2026-09,2026,Sáb,Planaltina,Planaltina,Noite,19.0,2.0,Não,,Solange Gomes dos Santos,Válido,Sim,-9,(61) 99274-7146,Q. E conj. E4 casa 20 vila de fatima,Quadra e conjunto e4 casa 20 vila Nossa Senhora de Fátima planaltina df,73340-754
+113,2026-09-21,2026-09-12,2026-09,2026,Sáb,Planaltina,Planaltina,Noite,19.0,2.0,Não,,Solange Gomes dos Santos,Válido,Não,-9,(61) 99274-7146,Q. E conj. E4 casa 20 vila de fatima,Quadra e conjunto e4 casa 20 vila Nossa Senhora de Fátima planaltina df,73340-754
 114,2026-09-21,2026-10-14,2026-10,2026,Qua,Planaltina,Planaltina,Manhã,8.0,2.0,Não,,Iranice Barbosa Santos,Válido,Não,23,(61) 98511-5631,OBS 04Planaltina,"Estância Nova Planaltina Qd02 Rua A, Área Especial Brasília Df",73380-100
 115,2026-11-18,2026-11-15,2026-11,2026,Dom,Planaltina,Planaltina,Tarde,16.0,4.0,Sim,Coletivo local,Carolyne Dias Saraiva Leão,Válido,Não,-3,(61) 99266-1117,Cabana nego Gerson,Cr 70 casa 196 vale do amanhecer Planaltina df,73370-070

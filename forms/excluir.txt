@@ -1,0 +1,2 @@
+# Coloque aqui o ID do Forms (coluna "ID") de respostas que não devem aparecer no painel,
+# um por linha. Ex.: respostas de teste que o filtro automático não pegou.

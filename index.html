@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diálogos sobre Economia Solidária (DES) – Painel</title>
+<meta name="description" content="Agendamento de encontros, indicadores e mapeamento de territórios dos Agentes Populares de Economia Solidária.">
+<link rel="stylesheet" href="des.css">
+<style>body{margin:0;background:#E4E8E5;padding:16px}.dash-skeleton{opacity:.4}</style>
+</head>
+<body>
+<div class="des">
+  <nav class="des-nav" role="tablist" aria-label="Páginas do painel">
+    <button type="button" class="des-tab" role="tab" data-tab="inicio" aria-selected="true">Início</button>
+    <button type="button" class="des-tab" role="tab" data-tab="agenda" aria-selected="false">Agendamento de encontros</button>
+    <button type="button" class="des-tab" role="tab" data-tab="indicadores" aria-selected="false">Dashboard de indicadores</button>
+    <button type="button" class="des-tab" role="tab" data-tab="mapa" aria-selected="false">Mapeamento de territórios</button>
+    <button type="button" class="des-tab" role="tab" data-tab="sobre-dados" aria-selected="false">Sobre os dados</button>
+  </nav>
+
+  <!-- ================= INÍCIO ================= -->
+  <section class="des-page" id="inicio">
+    <div class="des-hero">
+      <div class="des-heroside">
+        <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="22"/><path d="M20 26c4-6 20-6 24 0M20 38c4 6 20 6 24 0M24 22l-4 4 5 2M40 42l4-4-5-2"/></svg>
+        <h1><span>DIÁLOGOS</span><span>SOBRE</span><span class="des-y">ECONOMIA SOLIDÁRIA</span><span>(DES)</span></h1>
+        <div class="des-rule"></div>
+        <p>Conhecer para fortalecer.<br>Dialogar para transformar.</p>
+      </div>
+      <div class="des-navcards">
+        <button type="button" class="des-navcard" data-go="agenda" id="nav-agenda">
+          <span class="des-circle"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="6" y="9" width="28" height="25" rx="3"/><path d="M6 16h28M13 5v7M27 5v7M12 22h3M19 22h3M26 22h3M12 28h3M19 28h3"/></svg></span>
+          <span class="des-nct">Agendamento de encontros</span>
+          <span class="des-line"></span>
+          <span class="des-ncd">Calendário e lista dos encontros nos territórios.</span>
+          <span class="des-chip"><span data-draw="num" data-source="kpis" data-field="acoes" data-row="0">—</span> encontros registrados</span>
+          <span class="des-go">Abrir →</span>
+        </button>
+        <button type="button" class="des-navcard" data-go="indicadores" id="nav-indicadores">
+          <span class="des-circle"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M8 33V24M16 33V18M24 33V21M32 33V11M7 19l9-8 8 4 9-9"/></svg></span>
+          <span class="des-nct">Dashboard de indicadores</span>
+          <span class="des-line"></span>
+          <span class="des-ncd">Formação, multiplicação e parcerias da Economia Solidária.</span>
+          <span class="des-chip"><span data-draw="num" data-source="indicadores" data-field="multiplicados" data-row="0">—</span> pessoas alcançadas</span>
+          <span class="des-go">Abrir →</span>
+        </button>
+        <button type="button" class="des-navcard" data-go="mapa" id="nav-mapa">
+          <span class="des-circle"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M5 10l9-4 12 4 9-4v24l-9 4-12-4-9 4z"/><path d="M14 6v24M26 10v24"/></svg></span>
+          <span class="des-nct">Mapeamento de territórios</span>
+          <span class="des-line"></span>
+          <span class="des-ncd">Onde os encontros acontecem e quais ODS são trabalhados.</span>
+          <span class="des-chip"><span data-draw="num" data-source="kpis" data-field="territorios" data-row="0">—</span> territórios</span>
+          <span class="des-go">Abrir →</span>
+        </button>
+      </div>
+    </div>
+    <div class="des-card des-logos" id="parceiros-capa">
+      <span>Realização:</span><b>PICAPS</b><b>Radar de Territórios</b><b>CoLaboratório CTIS</b><b>Fiocruz Brasília</b><b>SUS</b><b>Ministério da Saúde</b><b>Governo do Brasil</b>
+    </div>
+  </section>
+
+  <!-- ================= AGENDAMENTO ================= -->
+  <section class="des-page" id="agenda" hidden>
+    <div class="des-layout">
+      <aside class="des-side" id="side-agenda">
+        <div><h2>Acompanhamento dos encontros</h2><div class="des-rule" style="margin-top:8px"></div></div>
+        <label class="des-field">Agente
+          <select class="des-select" data-draw="f_agente" data-source="acoes" aria-label="Agente"></select></label>
+        <label class="des-field">Território
+          <select class="des-select" data-draw="f_terr" data-source="acoes" aria-label="Território"></select></label>
+        <label class="des-field">Ciclo
+          <select class="des-select des-ciclo" aria-label="Ciclo"><option value="">Todos</option><option value="2024–25">2024–25</option><option value="2026">2026</option></select></label>
+        <button type="button" class="des-clear">Limpar filtros</button>
+        <div class="des-sidekpi" id="kpi-total">
+          <p>Total de encontros</p>
+          <span class="des-num" data-draw="num" data-source="kpis" data-field="acoes" data-row="0">—</span>
+          <p>válidos, no filtro atual</p>
+        </div>
+        <div class="des-sidekpi" id="kpi-proximo" style="background:transparent;border:1px solid rgba(255,255,255,.4)">
+          <p>Próximo encontro</p>
+          <p style="font-size:18px;font-weight:700;margin-top:4px" data-draw="proximo" data-source="proximo">—</p>
+        </div>
+      </aside>
+      <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+        <h1 style="font-size:22px;font-weight:800;color:var(--vv)">Agendamento de Ações – Agentes Populares de Economia Solidária</h1>
+        <div class="des-card" id="calendario">
+          <div class="des-calhead">
+            <button type="button" class="des-btn des-prev" aria-label="Mês anterior">‹</button>
+            <button type="button" class="des-btn des-next" aria-label="Próximo mês">›</button>
+            <button type="button" class="des-btn des-recent">Mais recente</button>
+            <h2 data-draw="cal_titulo">—</h2>
+          </div>
+          <div class="des-cal" data-draw="cal" data-source="base"></div>
+          <div class="des-legend"><span><span class="des-sw" style="background:var(--vv)"></span>encontro (território)</span><span><span class="des-sw" style="background:#C9EFD3"></span>hoje</span><span>Clique num dia para ver só os encontros dele.</span></div>
+        </div>
+        <div class="des-card" id="lista-encontros">
+          <h2 class="des-h">Encontros do período</h2>
+          <div class="des-infoline" data-draw="lista_info">—</div>
+          <div class="des-tablewrap">
+            <table class="des-table" data-source="lista" data-row-key="registro">
+              <thead><tr><th data-field="data">Data</th><th data-field="dia_semana">Dia</th><th data-field="inicio">Início</th><th data-field="termino">Término</th><th data-field="territorio">Território</th><th data-field="local">Local</th><th data-field="endereco">Endereço</th><th data-field="agente">Agente</th><th data-field="contato">Contato</th><th data-field="parceria">Parceria</th></tr></thead>
+              <tbody data-draw="t_lista"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INDICADORES ================= -->
+  <section class="des-page" id="indicadores" hidden>
+    <div class="des-banner" id="banner-ind">
+      <span class="des-circle"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="25" r="4"/><circle cx="20" cy="25" r="4"/><circle cx="29" cy="25" r="4"/><path d="M5 36c1-4 4-6 6-6s5 2 6 6M14 36c1-4 4-6 6-6s5 2 6 6M23 36c1-4 4-6 6-6s5 2 6 6M13 6h16v10H19l-4 3v-3h-2z"/></svg></span>
+      <div><h1>Diálogos de Economia Solidária (DES)</h1><p>Construindo saberes e fortalecendo territórios</p></div>
+    </div>
+    <div class="des-kpis">
+      <div class="des-card des-kpi" id="kpi-agentes">
+        <svg class="des-ico" viewBox="0 0 40 40" fill="currentColor"><circle cx="20" cy="12" r="6"/><circle cx="9" cy="16" r="4.5"/><circle cx="31" cy="16" r="4.5"/><path d="M10 34c0-7 4-12 10-12s10 5 10 12zM1 32c0-5 3-9 8-9 2 0 3 .5 4 1-3 2-4 5-4 8zM39 32c0-5-3-9-8-9-2 0-3 .5-4 1 3 2 4 5 4 8z"/></svg>
+        <span class="des-lab">Agentes populares</span>
+        <span class="des-num" data-draw="num" data-source="indicadores" data-field="agentes_populares" data-row="0">—</span>
+        <span class="des-desc">pessoas atuando nos territórios</span>
+      </div>
+      <div class="des-card des-kpi" id="kpi-qualificadas">
+        <svg class="des-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M4 9c6-2 11-1 16 3 5-4 10-5 16-3v23c-6-2-11-1-16 3-5-4-10-5-16-3z"/><path d="M20 12v23"/></svg>
+        <span class="des-lab">Qualificadas</span>
+        <span class="des-num" data-draw="num" data-source="indicadores" data-field="qualificadas" data-row="0">—</span>
+        <span class="des-desc">concluíram a formação</span>
+      </div>
+      <div class="des-card des-kpi" id="kpi-multiplicados">
+        <svg class="des-ico" viewBox="0 0 40 40" fill="currentColor"><path d="M20 6L2 14l18 8 14-6.2V26h3V14z"/><path d="M9 20v8c3 3 7 4 11 4s8-1 11-4v-8l-11 5z"/></svg>
+        <span class="des-lab">Multiplicados</span>
+        <span class="des-num" data-draw="num" data-source="indicadores" data-field="multiplicados" data-row="0">—</span>
+        <span class="des-desc">pessoas alcançadas pelos agentes</span>
+      </div>
+      <div class="des-card des-kpi" id="kpi-inscritas">
+        <svg class="des-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M9 4h15l7 7v25H9z"/><path d="M24 4v7h7M14 18h12M14 24h12M14 30h7"/></svg>
+        <span class="des-lab">Inscritas</span>
+        <span class="des-num" data-draw="num" data-source="indicadores" data-field="inscritas" data-row="0">—</span>
+        <span class="des-desc">se inscreveram na formação</span>
+      </div>
+      <div class="des-card des-kpi" id="kpi-instituicoes">
+        <svg class="des-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M2 14l7-4 7 3 4-2 4 2 7-3 7 4M6 22l6 6c1 1 3 1 4 0M12 24l5 5c1 1 3 1 4 0M17 22l5 5c1 1 3 1 4 0l6-6M16 13l-6 6 2 2 7-4"/></svg>
+        <span class="des-lab">Instituições parceiras</span>
+        <span class="des-num" data-draw="num" data-source="kpis" data-field="instituicoes" data-row="0">—</span>
+        <span class="des-desc">citadas nos registros dos encontros</span>
+      </div>
+    </div>
+    <div class="des-card" id="funil">
+      <h2 class="des-h">Da inscrição à multiplicação</h2>
+      <p class="des-sub">Quanto de cada etapa chega à seguinte</p>
+      <div class="des-funnel">
+        <div class="des-step"><p class="des-lab">1. Inscritas</p><p class="des-num" data-draw="num" data-source="funil" data-field="inscritas" data-row="0">—</p><p class="des-conv">início da formação</p></div>
+        <div class="des-step"><p class="des-lab">2. Qualificadas</p><p class="des-num" data-draw="num" data-source="funil" data-field="qualificadas" data-row="0">—</p><p class="des-conv"><b data-draw="num" data-fmt="pct" data-source="funil" data-field="pct_qualificadas" data-row="0">—</b> das inscritas</p></div>
+        <div class="des-step"><p class="des-lab">3. Agentes populares</p><p class="des-num" data-draw="num" data-source="funil" data-field="agentes" data-row="0">—</p><p class="des-conv"><b data-draw="num" data-fmt="pct" data-source="funil" data-field="pct_agentes" data-row="0">—</b> das qualificadas</p></div>
+        <div class="des-step"><p class="des-lab">4. Multiplicados</p><p class="des-num" data-draw="num" data-source="funil" data-field="multiplicados" data-row="0">—</p><p class="des-conv">cerca de <b data-draw="num" data-source="funil" data-field="por_agente" data-row="0">—</b> pessoas por agente</p></div>
+      </div>
+    </div>
+    <div class="des-grid">
+      <div class="des-card" id="graf-mes">
+        <h2 class="des-h">Encontros por mês</h2>
+        <p class="des-sub">Os dois ciclos do projeto e a pausa entre eles</p>
+        <div class="des-chart" data-draw="ch_mes" data-source="por_mes"></div>
+        <div class="des-legend"><span><span class="des-sw" style="background:#00663A"></span>ciclo 2024–25</span><span><span class="des-sw" style="background:#2DB36F"></span>ciclo 2026</span></div>
+      </div>
+      <div class="des-card" id="graf-parceiros">
+        <h2 class="des-h">Instituições parceiras citadas</h2>
+        <p class="des-sub">Encontros com parceria, por instituição (pergunta existe desde abr/2026)</p>
+        <div class="des-chart" style="min-height:150px" data-draw="ch_inst" data-source="instituicoes"></div>
+      </div>
+    </div>
+    <div class="des-card des-logos" id="parceiros-ind">
+      <span>Realização:</span><b>Fiocruz Brasília</b><b>SUS</b><b>Ministério da Saúde</b><b>Governo do Brasil</b><b>Radar de Territórios</b><b>PICAPS</b>
+    </div>
+  </section>
+
+  <!-- ================= MAPEAMENTO ================= -->
+  <section class="des-page" id="mapa" hidden>
+    <div class="des-layout">
+      <aside class="des-side" id="side-mapa">
+        <div><span class="des-nct">Mapeamento de Territórios</span><div class="des-rule" style="margin-top:8px;background:var(--vc)"></div></div>
+        <label class="des-field">Ciclo
+          <select class="des-select des-ciclo" aria-label="Ciclo"><option value="">Todos</option><option value="2024–25">2024–25</option><option value="2026">2026</option></select></label>
+        <label class="des-field">Territórios
+          <select class="des-select" data-draw="f_terr" data-source="acoes" aria-label="Território"></select></label>
+        <label class="des-field">Agente popular
+          <select class="des-select" data-draw="f_agente" data-source="acoes" aria-label="Agente popular"></select></label>
+        <button type="button" class="des-clear">Limpar filtros</button>
+        <p class="des-sidenote">Clique numa bolha do mapa para filtrar o território.</p>
+      </aside>
+      <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+        <div class="des-kpis">
+          <div class="des-card des-kpi" id="kpi-participantes"><span class="des-lab">Nº de participantes</span><span class="des-num" data-draw="num" data-source="indicadores" data-field="participantes" data-row="0">—</span><span class="des-desc">pessoas alcançadas</span></div>
+          <div class="des-card des-kpi" id="kpi-territorios"><span class="des-lab">Nº de territórios</span><span class="des-num" data-draw="num" data-source="kpis" data-field="territorios" data-row="0">—</span><span class="des-desc">com encontros, no filtro atual</span></div>
+          <div class="des-card des-kpi" id="kpi-locais"><span class="des-lab">Nº de locais visitados</span><span class="des-num" data-draw="num" data-source="indicadores" data-field="locais_visitados" data-row="0">—</span><span class="des-desc">espaços onde houve encontro</span></div>
+        </div>
+        <div class="des-card" id="ods">
+          <h2 class="des-h">Objetivos de Desenvolvimento Sustentável trabalhados</h2>
+          <div class="des-ods">
+            <div class="des-odsb" style="background:#4C9F38"><b>3</b><span>Saúde e bem-estar</span></div>
+            <div class="des-odsb" style="background:#C5192D"><b>4</b><span>Educação de qualidade</span></div>
+            <div class="des-odsb" style="background:#FF3A21"><b>5</b><span>Igualdade de gênero</span></div>
+            <div class="des-odsb" style="background:#A21942"><b>8</b><span>Trabalho decente e crescimento econômico</span></div>
+            <div class="des-odsb" style="background:#DD1367"><b>10</b><span>Redução das desigualdades</span></div>
+            <div class="des-odsb" style="background:#FD9D24"><b>11</b><span>Cidades e comunidades sustentáveis</span></div>
+            <div class="des-odsb" style="background:#BF8B2E"><b>12</b><span>Consumo e produção responsáveis</span></div>
+            <div class="des-odsb" style="background:#3F7E44"><b>13</b><span>Ação contra a mudança do clima</span></div>
+            <div class="des-odsb" style="background:#00689D"><b>16</b><span>Paz, justiça e instituições eficazes</span></div>
+            <div class="des-odsb q"><b>?</b><span>2 ícones aparecem quebrados no painel atual: confirmar quais ODS são</span></div>
+          </div>
+        </div>
+        <div class="des-grid">
+          <div class="des-card" id="mapa-df">
+            <h2 class="des-h">Encontros por território no DF</h2>
+            <p class="des-sub">Bolha maior = mais encontros · posição aproximada de cada região administrativa</p>
+            <div class="des-chart" style="min-height:260px" data-draw="ch_mapa" data-source="mapa"></div>
+          </div>
+          <div class="des-card" id="graf-turno">
+            <h2 class="des-h">Turno dos encontros em cada território</h2>
+            <p class="des-sub">Manhã: antes das 12h · Tarde: 12h às 18h · Noite: depois das 18h</p>
+            <div class="des-chart" data-draw="ch_turno" data-source="turno_terr"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOBRE ================= -->
+  <section class="des-page" id="sobre-dados" hidden>
+    <div class="des-card des-about" id="sobre">
+      <h2 class="des-h">Sobre os dados</h2>
+      <p>Encontros: respostas do formulário de agendamento dos Agentes Populares de Economia Solidária. São <b data-draw="num" data-source="qualidade" data-field="validos" data-row="0">—</b> encontros registrados; a resposta mais recente foi enviada em <b data-draw="txt" data-fmt="data" data-source="qualidade" data-field="ultima_resposta" data-row="0">—</b>. Respostas de teste e datas impossíveis ficam de fora.</p>
+      <p>Nomes, telefones e endereços aparecem com autorização dos agentes, para consulta pública do território.</p>
+      <p>Agentes, qualificadas, inscritas, multiplicados, participantes e locais visitados vêm dos indicadores do projeto.</p>
+      <ul>
+        <li>“Itapõa” aparece como “Itapoã” e “Santa Luzia - Estrutural” está somado a Estrutural.</li>
+        <li>Ciclos: 2024–25 (fev/2024 a jan/2025) e 2026 (a partir de abr/2026).</li>
+        <li>No mapa, a posição de cada território é aproximada.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+<script src="vendor/d3.min.js"></script>
+<script src="dash-shim.js"></script>
+<script src="des-calc.js"></script>
+<script src="des-util.js"></script>
+<script src="des-draw.js"></script>
+<script src="des-nav.js"></script>
+</body>
+</html>

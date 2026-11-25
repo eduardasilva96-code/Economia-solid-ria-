@@ -16,8 +16,8 @@ Projeto ligado ao PICAPS, ao Radar de Territórios e ao CoLaboratório CTIS (Fio
 
 A planilha do painel é gerada automaticamente a partir do Excel do Forms:
 
-1. No Forms, abra **Respostas → Abrir no Excel** (ou baixe as respostas) e salve o arquivo como `respostas.xlsx`.
-2. Aqui no GitHub, entre na pasta `forms/`, clique em **Add file → Upload files**, envie o `respostas.xlsx` (substituindo o anterior) e clique em **Commit changes**.
+1. No Forms, abra **Respostas → Abrir no Excel** (ou baixe as respostas).
+2. Aqui no GitHub, entre na pasta `forms/`, clique em **Add file → Upload files**, envie o Excel (pode ficar com o nome que veio do Forms) e clique em **Commit changes**. A automação usa sempre o último Excel enviado; os antigos podem ser apagados.
 3. A automação **Atualizar dados do painel** (aba **Actions**) roda sozinha. Ela padroniza as respostas, grava `data/acoes.csv` e o site atualiza em alguns minutos.
 
 O que a automação faz com as respostas:

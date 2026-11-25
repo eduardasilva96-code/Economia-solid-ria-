@@ -4,7 +4,21 @@
   const row = d.status === 'ok' && Array.isArray(d.data) ? d.data[Number(el.dataset.row || 0)] : null;
   if (!row) { el.classList.toggle('dash-skeleton', d.status === 'loading'); el.textContent = '—'; return; }
   el.classList.remove('dash-skeleton');
-  el.textContent = DES.fmt(row[el.dataset.field], el.dataset.fmt);
+  const final = DES.fmt(row[el.dataset.field], el.dataset.fmt);
+  const alvo = Number(row[el.dataset.field]);
+  const mover = el.classList.contains('des-countup') && !el.dataset.contou && isFinite(alvo) && alvo > 0
+    && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if (!mover) { el.textContent = final; return; }
+  el.dataset.contou = '1';
+  const t0 = performance.now(), dur = 1400;
+  const passo = (t) => {
+    const p = Math.min(1, (t - t0) / dur);
+    const e = 1 - Math.pow(1 - p, 3);
+    el.textContent = p < 1 ? DES.nf.format(Math.round(alvo * e)) : final;
+    if (p < 1) requestAnimationFrame(passo);
+  };
+  el.textContent = DES.nf.format(0);
+  requestAnimationFrame(passo);
 }));
 
 dash.draw('proximo', (el) => {

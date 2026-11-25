@@ -1,13 +1,12 @@
 name: Atualizar dados do painel
 
-# Roda quando alguém sobe um novo forms/respostas.xlsx (ou o forms/excluir.txt),
-# e também pelo botão "Run workflow" na aba Actions.
+# Roda quando alguém sobe um Excel na pasta forms/ (com qualquer nome) ou muda o forms/excluir.txt,
+# e também pelo botão "Run workflow" na aba Actions. Usa sempre o Excel enviado por último.
 on:
   push:
     branches: [main]
     paths:
-      - "forms/respostas.xlsx"
-      - "forms/excluir.txt"
+      - "forms/**"
       - "scripts/atualizar_dados.py"
   workflow_dispatch:
 
@@ -23,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
 
       - uses: actions/setup-python@v5
         with:
@@ -32,7 +33,11 @@ jobs:
         run: pip install pandas openpyxl
 
       - name: Gerar data/acoes.csv a partir do Excel do Forms
-        run: python scripts/atualizar_dados.py forms/respostas.xlsx data/acoes.csv
+        run: |
+          ARQ=$(git -c core.quotePath=false log -1 --format= --name-only --diff-filter=AM -- 'forms/*.xlsx' 'forms/*.XLSX' | head -n1)
+          if [ -z "$ARQ" ]; then ARQ=$(ls -t forms/*.xlsx | head -n1); fi
+          echo "Usando o Excel: $ARQ"
+          python scripts/atualizar_dados.py "$ARQ" data/acoes.csv
 
       - name: Salvar no repositório (se mudou)
         run: |
@@ -43,5 +48,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/acoes.csv
-          git commit -m "Atualiza data/acoes.csv a partir de forms/respostas.xlsx"
+          git commit -m "Atualiza data/acoes.csv a partir do Excel do Forms"
           git push

@@ -6,6 +6,7 @@
     nf,
     verde: '#00663A', verdeEsc: '#004D2B', verdeClaro: '#2DB36F', amarelo: '#F7C600',
     MESES,
+    ICONE_ES: '<svg viewBox="0 0 40 40" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M2 14l7-4 7 3 4-2 4 2 7-3 7 4M6 22l6 6c1 1 3 1 4 0M12 24l5 5c1 1 3 1 4 0M17 22l5 5c1 1 3 1 4 0l6-6M16 13l-6 6 2 2 7-4"/></svg>',
     MESES_LONGOS: ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'],
     mes: (k) => { const [y, m] = k.split('-'); return MESES[Number(m) - 1] + '/' + y.slice(2); },
     dataBR: (iso) => { const [y, m, d] = String(iso).split('-'); return d + '/' + m + '/' + y; },

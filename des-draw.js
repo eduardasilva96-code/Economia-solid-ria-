@@ -94,10 +94,19 @@ dash.draw('cal', (el) => {
     b.className = 'des-day' + (dt.getUTCMonth() !== m ? ' out' : '') + (iso === desHoje ? ' today' : '') + (evs.length ? ' has' : '') + (desCal.dia === iso ? ' sel' : '');
     const dn = document.createElement('span'); dn.className = 'des-dn'; dn.textContent = dt.getUTCDate();
     b.appendChild(dn);
-    evs.slice(0, 2).forEach((r) => { const e = document.createElement('span'); e.className = 'des-ev'; e.textContent = r.territorio; b.appendChild(e); });
+    evs.slice(0, 2).forEach((r) => {
+      const e = document.createElement('span'); e.className = 'des-ev';
+      const t = document.createElement('span'); t.className = 'des-ev-t'; t.textContent = 'Encontro sobre Economia Solidária';
+      const l = document.createElement('span'); l.className = 'des-ev-l'; l.textContent = r.territorio;
+      const ic = document.createElement('span'); ic.className = 'des-ev-i';
+      ic.innerHTML = DES.ICONE_ES;
+      e.append(ic, t, l);
+      e.title = 'Encontro sobre Economia Solidária – ' + r.territorio + (r.local ? ', ' + r.local : '');
+      b.appendChild(e);
+    });
     if (evs.length > 2) { const e = document.createElement('span'); e.className = 'des-ev more'; e.textContent = '+' + (evs.length - 2) + ' encontros'; b.appendChild(e); }
     if (evs.length) {
-      b.setAttribute('aria-label', DES.dataBR(iso) + ': ' + evs.length + (evs.length > 1 ? ' encontros' : ' encontro'));
+      b.setAttribute('aria-label', DES.dataBR(iso) + ': ' + evs.length + (evs.length > 1 ? ' encontros sobre Economia Solidária' : ' encontro sobre Economia Solidária'));
       b.addEventListener('click', () => {
         if (dt.getUTCMonth() !== m) { desCal.y = dt.getUTCFullYear(); desCal.m = dt.getUTCMonth(); }
         desCal.dia = desCal.dia === iso ? null : iso;
